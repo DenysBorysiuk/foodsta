@@ -1,0 +1,42 @@
+.nav {
+  @extend %reset-list;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    gap: 28px;
+  }
+}
+
+.nav__link {
+  position: relative;
+  @extend %reset-link;
+  @include fonts(14px, 16px);
+  color: var(--secondary-font-cl);
+  transition: color var(--animation);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: var(--accent-cl);
+    border-radius: 1px;
+
+    transition: opacity var(--animation);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+  }
+}

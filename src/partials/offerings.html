@@ -1,0 +1,99 @@
+ <section class="offerings" id="service">
+        <div class="container offerings__container">
+          <div class="offerings__thumb">
+            <picture>
+              <!-- desktop screen -->
+              <source
+                media="(min-width: 1280px)"
+                srcset="
+                  ./images/offerings/apple_lg@1x.webp 1x,
+                  ./images/offerings/apple_lg@2x.webp 2x
+                "
+                type="image/webp"
+              />
+
+              <source
+                media="(min-width: 1280px)"
+                srcset="
+                  ./images/offerings/apple_lg@1x.png 1x,
+                  ./images/offerings/apple_lg@2x.png 2x
+                "
+                type="image/jpg"
+              />
+              <!-- tablet screen -->
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  ./images/offerings/apple_md@1x.webp 1x,
+                  ./images/offerings/apple_md@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  ./images/offerings/apple_md@1x.png 1x,
+                  ./images/offerings/apple_md@2x.png 2x
+                "
+                type="image/jpg"
+              />
+              <!-- mobile screen -->
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  ./images/offerings/apple_sm@1x.webp 1x,
+                  ./images/offerings/apple_sm@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  ./images/offerings/apple_sm@1x.png 1x,
+                  ./images/offerings/apple_sm@2x.png 2x
+                "
+                type="image/jpg"
+              />
+              <!-- fallback -->
+              <img src="./images/offerings/apple_sm@1x.png" alt="apple" />
+            </picture>
+          </div>
+          <div class="offerings__wrapper">
+            <h2 class="section-title offerings__title">What’s Special About Our Offerings</h2>
+            <p class="offerings__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+              eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum
+              nulla, ut commodo diam libero vitae erat.
+            </p>
+            <ul class="offerings__list">
+              <li class="offerings__item">
+                <h3 class="offerings__subtitle">Fasest Delivery</h3>
+                <p class="offerings__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
+                  in eros.
+                </p>
+              </li>
+              <li class="offerings__item">
+                <svg class="offerings__icon" width="48" height="48"></svg>
+                <h3 class="offerings__subtitle">Easy To Order</h3>
+                <p class="offerings__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
+                  in eros.
+                </p>
+              </li>
+            </ul>
+            <div class="read-more__wrapper"></div>
+            <button class="offerings__btn" type="button" data-modal-open-3>Order Now</button>
+              <input type="checkbox" id="read-more" hidden />
+              <p class="extra-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sed nihil provident
+                corporis cum numquam accusamus. Dignissimos, dolores vitae voluptate, quam, neque
+                provident impedit suscipit molestiae facilis dolorum fugit deleniti.
+              </p>
+              <label for="read-more" class="read-more"
+                >Read&nbsp;<span class="more">More</span><span class="less"> Less</span></label
+              >
+            </div>
+          </div>
+        </div>
+      </section>

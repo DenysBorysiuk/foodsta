@@ -1,0 +1,97 @@
+<section class="subscribe" id="contact">
+  <div class="container subscribe__container">
+    <div class="subscribe__thumb">
+      <picture>
+        <!-- desktop screen -->
+        <source
+          media="(min-width: 1280px)"
+          srcset="
+            ./images/subscribe/banan_lg@1x.webp 1x,
+            ./images/subscribe/banan_lg@2x.webp 2x
+          "
+          type="image/webp"
+        />
+
+        <source
+          media="(min-width: 1280px)"
+          srcset="
+            ./images/subscribe/banan_lg@1x.png 1x,
+            ./images/subscribe/banan_lg@2x.png 2x
+          "
+          type="image/jpg"
+        />
+        <!-- tablet screen -->
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/subscribe/banan_md@1x.webp 1x,
+            ./images/subscribe/banan_md@2x.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/subscribe/banan_md@1x.png 1x,
+            ./images/subscribe/banan_md@2x.png 2x
+          "
+          type="image/jpg"
+        />
+        <!-- mobile screen -->
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/subscribe/banan_sm@1x.webp 1x,
+            ./images/subscribe/banan_sm@2x.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            ./images/subscribe/banan_sm@1x.png 1x,
+            ./images/subscribe/banan_sm@2x.png 2x
+          "
+          type="image/jpg"
+        />
+        <!-- fallback -->
+        <img
+          src="./images/subscribe/banan_sm@1x.png"
+          width="608"
+          height="266"
+          alt="banan"
+        />
+      </picture>
+    </div>
+    <h2 class="section-title subscribe__title">
+      Subscribe To Get Special Offers
+    </h2>
+    <p class="subscribe__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      varius enim in eros elementum tristique.
+    </p>
+    <form class="subscription-form">
+      <label class="subscription-form__group">
+        <input
+          class="subscription-form__input"
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+          pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
+        />
+        <div class="subscription-form__notification">
+          <svg width="12" height="12">
+            <use href="./images/icons.svg#triangle"></use>
+          </svg>
+          <span class="subscription-form__desc"
+            >Not a valid email address (example@email.com)</span
+          >
+        </div>
+      </label>
+      <button class="subscription__btn subscribe__btn" type="button">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>

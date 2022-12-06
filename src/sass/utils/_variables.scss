@@ -1,0 +1,35 @@
+:root {
+  /* Fonts */
+  --primary-font: 'Roboto', sans-serif;
+
+  /* colors */
+  --main-light: #fff;
+  --main-yellow: #ffe550;
+  --accent-cl: #bbf330;
+
+  --main-green: #7eb101;
+  --hover-btn: #b5ff00;
+  --hover-btn-border: #597d00;
+
+  --main-font-cl: #2c2c2c;
+  --secondary-font-cl: #000;
+  --placeholder-font-cl: #505050;
+  --form-font-cl: #c4c4c4;
+  --form-red: #ff705d;
+
+  --light-bg-cl: #fefefe;
+  --backdrop-bg-cl: rgba(94, 99, 99, 0.7);
+
+  // --icon-cl: #afb1b8;
+
+  /* other   */
+  --indent: 30px;
+  --items: 3;
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1280px;

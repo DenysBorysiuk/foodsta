@@ -1,0 +1,91 @@
+.subscription-form {
+  @media screen and(min-width: $tablet) {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+.subscription-form__group {
+  position: relative;
+  display: block;
+
+  @media screen and(max-width: calc($tablet - 1px)) {
+    margin-bottom: 20px;
+  }
+}
+
+.subscription-form__input {
+  width: 100%;
+  border: 1px solid var(--main-yellow);
+  border-radius: 30px;
+  padding: 12px 11px;
+
+  background-color: transparent;
+  outline: transparent;
+
+  @include fonts(12px, 18px);
+  color: var(--main-light-cl);
+
+  transition: border-color var(--animation);
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    border-color: var(--main-yellow);
+  }
+
+  &::placeholder {
+    color: var(--placeholder-font-cl);
+    transition: color var(--animation);
+  }
+
+  &:focus::placeholder {
+    color: var(--contacts-form-cl);
+  }
+
+  &:required:valid:not(:placeholder-shown) {
+    border-color: var(--accent-cl);
+  }
+
+  &:required:invalid:not(:placeholder-shown) {
+    border-color: var(--form-red);
+  }
+}
+
+.subscription-form__label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  @include fonts(12px, 18px);
+  color: var(--placeholder-font-cl);
+}
+
+.subscription-form__notification {
+  position: absolute;
+  bottom: -15px;
+  left: 0px;
+
+  width: 100%;
+  opacity: 0;
+
+  transition: opacity var(--animation);
+
+  .subscription-form__input:required:invalid:not(:placeholder-shown) ~ & {
+    opacity: 1;
+  }
+}
+
+.subscription-form__desc {
+  @include fonts(11px, 15px);
+  text-align: left;
+  color: var(--form-red);
+}
+
+.subscription__btn {
+  @extend %button;
+  display: block;
+  padding: 11px 22px;
+
+  @media screen and(max-width: calc($tablet - 1px)) {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,35 @@
+.card {
+  padding: 8px;
+  background-color: var(--main-light);
+  border-radius: 33px;
+  border-top-left-radius: 0;
+
+  max-width: 501px;
+
+  &__icon {
+    margin-bottom: 28px;
+  }
+
+  &__text {
+    @include fonts(16px, 19px, 700);
+    margin-bottom: 40px;
+  }
+
+  &__box {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__thumb {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 16px;
+    border-right: 1px solid #7eb101;
+  }
+
+  &__subtitle {
+    @include fonts(14px, 21px, 500);
+  }
+
+  //   &__desc {}
+}

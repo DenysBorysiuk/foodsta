@@ -1,0 +1,52 @@
+.read-more {
+  margin-left: 24px;
+  max-width: 200px;
+  color: var(--secondary-font-cl);
+  @include fonts(14px, 20px);
+
+  @media screen and(min-width:$desktop) {
+    display: none;
+  }
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+}
+.more:after {
+  content: url(../images/icons/readmore.svg);
+
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+
+.extra-text {
+  display: none;
+  margin: 20px 0;
+}
+
+#read-more:checked ~ .extra-text {
+  display: block;
+}
+
+.less {
+  display: none;
+  align-items: center;
+}
+
+#read-more:checked ~ .read-more .more {
+  display: none;
+}
+
+#read-more:checked ~ .read-more .less {
+  display: inline-flex;
+}
+
+.less:after {
+  content: url(../images/icons/readmore.svg);
+  transform: rotate(-180deg);
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}

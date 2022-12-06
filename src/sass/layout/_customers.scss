@@ -1,0 +1,50 @@
+.customers {
+  @include section;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url(../images/customers/bg_xs.svg);
+
+  @media screen and(min-width:768px) {
+    background-image: url(../images/customers/bg_sm.svg);
+  }
+
+  @media screen and(min-width:768px) {
+    padding-bottom: 120px;
+    background-image: url(../images/customers/bg_md.svg);
+  }
+
+  @media screen and(min-width:1280px) {
+    padding-bottom: 200px;
+    background-image: url(../images/customers/bg_lg.svg);
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+    @include fonts(14px, 16px);
+
+    @media screen and(min-width: $tablet) {
+      @include fonts(16px, 19px);
+    }
+  }
+
+  &__list {
+    @extend %reset-list;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and(min-width: $tablet) {
+      flex-direction: row;
+      gap: 32px;
+    }
+    @media screen and(min-width: $desktop) {
+      gap: 139px;
+    }
+  }
+}

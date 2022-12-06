@@ -1,0 +1,56 @@
+.hero {
+  text-align: left;
+
+  @media screen and(max-width: calc($desktop - 1px)) {
+    @include section;
+  }
+
+  @media screen and(min-width:$tablet) {
+    padding-bottom: 0;
+  }
+
+  &__container {
+    position: relative;
+
+    @media screen and(min-width: $desktop) {
+      padding-top: 159px;
+    }
+  }
+
+  &__wrapper {
+    @media screen and(min-width: $desktop) {
+      width: 502px;
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 28px;
+  }
+
+  &__text {
+    margin-bottom: 28px;
+    @include fonts(14px, 21px);
+
+    @media screen and(min-width: $tablet) {
+      @include fonts(16px, 24px);
+    }
+
+    @media screen and(min-width: $tablet) and(max-width: calc($desktop - 1px)) {
+      max-width: 336px;
+    }
+  }
+}
+
+.hero__btn {
+  @extend %button;
+  padding: 6px 17px;
+  background-color: var(--accent-cl);
+
+  transition: background-color var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn);
+  }
+}

@@ -1,0 +1,158 @@
+.offerings {
+  @include section;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url(../images/offerings/bg_xs.svg);
+
+  @media screen and(min-width: $mobile) {
+    background-image: url(../images/offerings/bg_sm.svg);
+  }
+
+  @media screen and(min-width: $tablet) {
+    // padding-top: 90px;
+    background-image: url(../images/offerings/bg_md.svg);
+  }
+
+  @media screen and(min-width: $desktop) {
+    // padding-top: 200px;
+    background-image: url(../images/offerings/bg_lg.svg);
+  }
+
+  &__container {
+    @media screen and(min-width: $desktop) {
+      display: flex;
+      gap: 90px;
+    }
+  }
+
+  &__thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and(max-width: calc($desktop - 1px)) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and(min-width:$desktop) {
+      margin-bottom: 75px;
+
+      width: 550px;
+      height: 604px;
+    }
+  }
+
+  &__wrapper {
+    @media screen and(min-width:$desktop) {
+      padding-top: 150px;
+      width: 573px;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 28px;
+
+    @media screen and(min-width: $tablet) {
+      width: 526px;
+    }
+  }
+
+  &__text {
+    text-align: left;
+    margin-bottom: 28px;
+    @include fonts(14px, 16px);
+
+    @media screen and(min-width: $tablet) {
+      margin-bottom: 40px;
+      @include fonts(16px, 19px);
+      width: 526px;
+    }
+
+    @media screen and(min-width: $desktop) {
+      @include fonts(16px, 24px);
+    }
+  }
+
+  &__list {
+    @extend %reset-list;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    @media screen and(min-width: $tablet) {
+      flex-direction: row;
+      gap: 116px;
+      margin-bottom: 40px;
+    }
+
+    @media screen and(min-width: $desktop) {
+      gap: 67px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__item {
+    @media screen and(min-width: $tablet) {
+      max-width: 252px;
+    }
+  }
+
+  &__item:nth-child(1):before {
+    content: url(../images/icons/deliv.svg);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+
+    @media screen and(min-width: $desktop) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item:nth-child(2):before {
+    content: url(../images/icons/order.svg);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    padding-bottom: 8px;
+
+    @media screen and(min-width: $desktop) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+    @include fonts(18px, 21px, 700);
+
+    @media screen and(min-width: $desktop) {
+      @include fonts(17px, 24px, 700);
+    }
+  }
+
+  &__desc {
+    @include fonts(14px, 16px);
+
+    @media screen and(min-width: $desktop) {
+      @include fonts(14px, 21px);
+    }
+  }
+}
+
+.offerings__btn {
+  @extend %button;
+  padding: 6px 17px;
+  background-color: var(--light-bg-cl);
+  border: 2px solid var(--main-green);
+
+  transition: border-color var(--animation);
+
+  &:hover,
+  &:focus {
+    border-color: #597d00;
+  }
+}

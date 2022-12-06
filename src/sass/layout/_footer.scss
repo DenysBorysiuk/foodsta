@@ -1,0 +1,181 @@
+.footer {
+  @include section;
+  background-color: var(--light-bg-cl);
+  box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+  background-repeat: no-repeat;
+  background-position: top right, bottom center, top 132px left;
+
+  background-image: url('../images/footer/orange_sm@1x.png'),
+    url('../images/footer/fruits_sm@1x.png'), url('../images/footer/apple_sm@1x.png');
+
+  background-image: -webkit-image-set(url('../images/footer/orange_sm@1x.webp') 1x),
+    -webkit-image-set(url('../images/footer/fruits_sm@1x.webp') 1x),
+    -webkit-image-set(url('../images/footer/apple_sm@1x.webp') 1x);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('../images/footer/orange_sm@2x.png'),
+      url('../images/footer/fruits_sm@2x.png'), url('../images/footer/apple_sm@2x.png');
+
+    background-image: -webkit-image-set(url('../images/footer/orange_sm@2x.webp') 2x),
+      -webkit-image-set(url('../images/footer/fruits_sm@2x.webp') 2x),
+      -webkit-image-set(url('../images/footer/apple_sm@2x.webp') 2x);
+  }
+
+  @media screen and(min-width:$tablet) {
+    background-position: top right, bottom center;
+    background-repeat: no-repeat, repeat-x;
+    background-image: url('../images/footer/orange_md@1x.png'),
+      url('../images/footer/fruits_md@1x.png');
+
+    background-image: -webkit-image-set(url('../images/footer/orange_md@1x.webp') 1x),
+      -webkit-image-set(url('../images/footer/fruits_md@1x.webp') 1x);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/footer/orange_md@2x.png'),
+        url('../images/footer/fruits_md@2x.png');
+
+      background-image: -webkit-image-set(url('../images/footer/orange_md@2x.webp') 2x),
+        -webkit-image-set(url('../images/footer/fruits_md@2x.webp') 2x);
+    }
+  }
+
+  @media screen and(min-width:$desktop) {
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-image: url('../images/footer/fruits_lg@1x.png');
+
+    background-image: -webkit-image-set(url('../images/footer/fruits_lg@1x.webp') 1x);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/footer/fruits_lg@2x.png');
+
+      background-image: -webkit-image-set(url('../images/footer/fruits_lg@2x.webp') 2x);
+    }
+  }
+
+  &__top {
+    margin-bottom: 60px;
+
+    @media screen and(min-width: $desktop) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__nav-wrapper {
+    display: flex;
+    margin-bottom: 41px;
+
+    @media screen and(min-width: $tablet) {
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+    margin-right: 81px;
+
+    @media screen and(min-width: $tablet) {
+      margin-right: 50px;
+    }
+
+    @media screen and(min-width: $desktop) {
+      margin-right: 148px;
+    }
+  }
+
+  & .nav {
+    position: relative;
+    display: flex;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 10px;
+    }
+  }
+
+  & .nav__link {
+    @media screen and(min-width: $tablet) {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+  }
+
+  & .nav__link::after {
+    bottom: 17px;
+  }
+
+  &__form-wrapper {
+    @media screen and(min-width: $desktop) {
+      margin-left: auto;
+    }
+  }
+
+  &__form-title {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__form {
+    margin-bottom: 12px;
+    gap: 13px;
+  }
+
+  & .subscription-form__group {
+    @media screen and(min-width: $tablet) {
+      width: 279px;
+    }
+  }
+
+  &__desc {
+    @include fonts(10px, 12px);
+  }
+
+  &__bottom {
+    @media screen and(min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__list {
+    @extend %reset-list;
+    display: flex;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    @media screen and(min-width: $tablet) {
+      gap: 20px;
+    }
+  }
+
+  &__link {
+    @include fonts(10px, 12px);
+    color: var(--main-green);
+  }
+
+  &__text {
+    text-align: center;
+    @include fonts(10px, 12px);
+  }
+}
+
+.footer__btn {
+  border: 1px solid var(--main-green);
+
+  transition: background-color var(--animation);
+
+  @media screen and (max-width: calc($tablet - 1px)) {
+    margin-bottom: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--main-yellow);
+  }
+}

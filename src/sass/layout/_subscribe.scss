@@ -1,0 +1,63 @@
+.subscribe {
+  @include section;
+
+  @media screen and(min-width:$tablet) {
+    padding-top: 82px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__thumb {
+    position: absolute;
+
+    @media screen and(max-width: calc($tablet - 1px)) {
+      top: -97px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 161px;
+      height: 78px;
+    }
+
+    @media screen and(min-width:$tablet) and(max-width: calc($desktop - 1px)) {
+      top: -155px;
+      right: 32px;
+      width: 281px;
+      height: 136px;
+    }
+
+    @media screen and(min-width:$desktop) {
+      bottom: -37px;
+      right: 32px;
+      width: 546px;
+      height: 266px;
+    }
+  }
+
+  & .subscription-form__group {
+    @media screen and(min-width: $tablet) {
+      max-width: 394px;
+      flex-grow: 1;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+}
+.subscribe__btn {
+  background-color: var(--accent-cl);
+
+  transition: background-color var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn);
+  }
+}
