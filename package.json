@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://DenysBorysiuk.github.io/foodsta-v2/",
+  "homepage": "https://DenysBorysiuk.github.io/foodsta/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /foodsta-v2/"
+    "build": "parcel build src/*.html --public-url /foodsta/"
   },
   "repository": {
     "type": "git",
