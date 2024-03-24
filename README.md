@@ -1,8 +1,23 @@
-This project was created with Parcel.
+# FoodSta 
 
-Use HTML, CSS, JavaScript, SAAS(SCSS) preprocessor and BEM methodology to build
-a website
+![Site image](./src/images/og-image.png)
 
-Layout is made relative to three transition points: 480px, 768px and 1200px.
+## 🗂️ Project description
 
-For writing styles, used the Mobile First approach .
+### Used Technologies:
+
+- HTML
+- CSS
+- SAAS(SCSS)
+- JavaScript
+- Parcel
+
+### Features
+
+- Layout is made relative to three transition points: 
+  - 480px 
+  - 768px 
+  - 1200px.
+
+- BEM methodology to build a website
+- For writing styles, used the Mobile First approach .
