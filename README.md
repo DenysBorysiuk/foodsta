@@ -1,4 +1,4 @@
-# FoodSta 
+# 🥘 FoodSta 
 
 ![Site image](./src/images/og-image.png)
 
