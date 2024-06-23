@@ -4,6 +4,11 @@
 
 ## 🗂️ Project description
 
+### Goals
+
+Implement the FoodSta landing page according to the technical
+specifications.
+
 ### Used Technologies:
 
 - HTML
